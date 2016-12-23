@@ -28,11 +28,11 @@ Basic options in infiniteslider.js are:
 
 ```
 Infiniteslider.init({
-    durationSuccess:750,
-    durationFail:900,
-    easingSuccess:'Expo.easeOut',
-    easingFail:'Back.easeInOut',
-    threshold:0.25 // from 0 to 1. determines
+    durationSuccess:750, // if drag did meet threshold, duration of animation.
+    durationFail:900, // if drag did not meet threshold, duration of animation.
+    easingSuccess:'Expo.easeOut', // if drag did meet threshold, ease type.
+    easingFail:'Back.easeInOut', // if drag did not meet threshold, ease type.
+    threshold:0.25 // from 0 to 1, determines whether the slide will snap to next/previous slide, depending on mouse x position.
 });
 
 ```
