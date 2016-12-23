@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>infiniteslider</title>
+    <meta name="author" content="Sim Boon Long">
+    <meta name="description" content="Carousel slider with infinite cycling.">
+    <link rel="stylesheet" type="text/css" href="css/infiniteslider.css">
+</head>
+<body>
+
+
+    <div id="infinite-slider">
+        <div class="infinite-holder">
+            <div class="infinite-slide">1</div>
+            <div class="infinite-slide">2</div>
+            <div class="infinite-slide">3</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="js/infiniteslider.js"></script>
+    <script>
+
+    // Initialize
+    Infiniteslider.init({
+        durationSuccess:750, // if drag did meet threshold, duration of animation.
+        durationFail:900, // if drag did not meet threshold, duration of animation.
+        easingSuccess:'Expo.easeOut', // if drag did meet threshold, ease type.
+        easingFail:'Back.easeInOut', // if drag did not meet threshold, ease type.
+        threshold:0.25 // from 0 to 1, determines whether the slide will snap to next/previous slide, depending on mouse x position.
+    });
+
+    </script>
+</body>
+</html>
