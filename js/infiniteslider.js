@@ -147,6 +147,7 @@ var Infiniteslider = (function() {
 
         // bind events
         setInfiniteSliderEvents();
+        infiniteSlider.attr('data-ready','1');
     };
 
     return {
